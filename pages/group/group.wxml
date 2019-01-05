@@ -1,0 +1,69 @@
+<!--pages/group/group.wxml-->
+<view>
+  <view class='groupHead'>
+    <view class='groupName'>
+      <view style='float: left;margin-top: 5rpx;margin-left:27%;margin-right:5rpx;'>
+        <image src='../../img/grouplist.png' style='width:40rpx;height: 40rpx;'></image>
+      </view>
+      <view style='float: left;'> 部门</view>
+    </view>
+    <view class='groupName'>
+      <view style='float: left;margin-top: 5rpx;margin-left:20%;margin-right:5rpx;'>
+        <image src='../../img/people.png' style='width:40rpx;height: 40rpx;'></image>
+      </view>
+      <view style='float: left;'> 管理员</view>
+    </view>
+    <view class='groupName'>
+      <view style='float: left;margin-top: 5rpx;margin-left:27%;margin-right:5rpx;'>
+        <image src='../../img/setup.png' style='width:40rpx;height: 40rpx;'></image>
+      </view>
+      <view style='float: left;'> 操作</view>
+    </view>
+  </view>
+  <view class='groupContent'>
+    <view class='{{item.class_}}' wx:for='{{group}}' wx:for-item="item" wx:key='item' bindtap='chooseGroup'  data-id="{{item.id}}">
+      <view class='groupName' style='font-size: 32rpx;'>
+        {{item.name}}
+      </view>
+      <view class='adminName' style='font-size: 32rpx;'>
+        {{item.adminName}}
+      </view>
+      <view class='quitGroup'>
+        <view class='quitBtn' catchtap='quit' data-id="{{item.id}}">退出</view>
+      </view>
+    </view>
+  </view>
+  <view class='groupDetailTop'>
+    *部门的详细信息
+  </view>
+  <view class='groupDetail'>
+    <view class='detailname'>
+      <text style='font-weight: bold;'>部门名称：</text>青铜组
+    </view>
+    <view class='detailadmin'>
+      <text style='font-weight: bold;'>管理员：</text>陈于希
+    </view>
+    <view class='datailphone'>
+      <text style='font-weight: bold;'>管理员手机：</text>18302039155
+    </view>
+    <view class='detailquantity'>
+      <text style='font-weight: bold;'>部门人数：</text>10
+    </view>
+    <view class='detailaddress'>
+      <view style=''>
+        <text style='font-weight: bold;'>打卡地址：</text>
+      </view>
+      <view style='margin-left: 50rpx;'><text>[ 广东广州广东工业大学生活西区 ]</text></view>
+    </view>
+    <view class='detailtime'>
+      <view style=''>
+        <text style='font-weight: bold;'>打卡时间：</text>
+      </view>
+      <view style='margin-left: 50rpx;'><text>[ 开始时间：8:00 | 结束时间：8:30 ]</text></view>
+    </view>
+    <view class='dataildate'>
+      <view style=''><text style='font-weight: bold;'>打卡日期：</text></view>
+      <view style='margin-left: 50rpx;'><text>[ 2018-10-01，2018-10-02，2018-10-03，2018-10-04，2018-10-05，2018-10-06，2018-10-07，2018-10-08，2018-10-09，2018-10-10，2018-10-11 ]</text></view>
+    </view>
+  </view>
+</view>

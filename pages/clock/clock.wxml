@@ -1,0 +1,46 @@
+<!--pages/clock/clock.wxml-->
+<view style='background-color: #EFF4FA;width:100%；'>
+  <view class='headTitle'>
+    <text class='headText'>欢迎使用小希打卡</text>
+  </view>
+  <view class='headTitle'>
+    <text style='font-size: 25rpx;color:#606266;'>*点击地图中心的小红点定位到该地点</text>
+  </view>
+  <view class="map_container"> 
+    <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap" style='border:1rpx solid #DCDFE6;'></map> 
+  </view> 
+  <view class="rgc_info"> 
+    <text>当前位置：{{rgcData.address}}</text> 
+    <!-- <text>{{rgcData.desc}}</text> 
+    <text>{{rgcData.business}}</text>  -->
+  </view>
+</view>
+<view class='bottom'>
+  <view class='bottomLeft'>
+    <view style='font-size:35rpx;'>待打卡任务：</view>
+    <view class='clockNow'>
+      <view>部门：青铜组</view>
+      <view>打卡日期：2018-10-01</view>
+      <view>打卡时间：8：00-8：30</view>
+    </view>
+    <view style='font-size:35rpx;'>今天已打卡记录：</view>
+    <view class='clockNow'>
+      <view>部门：青铜组</view>
+      <view>打卡日期：2018-10-01</view>
+      <view>打卡时间：8：15</view>
+    </view>
+  </view>
+  <view class='bottomRight'>
+    <view class='btn' style='margin-bottom:20rpx;' catchtap='reflash'>
+        <view>刷</view>
+        <view>新</view>
+    </view>
+    <view class='btn' catchtap='clock'>
+        <view>打</view>
+        <view>卡</view>
+    </view>
+  </view>
+</view>
+<view class='bottomTitle'>
+  {{weatherData}}
+</view>

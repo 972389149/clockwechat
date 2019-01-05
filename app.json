@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/clock/clock",
+    "pages/message/message",
+    "pages/group/group",
+    "pages/user/user"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/clock/clock",
+        "text": "打卡",
+        "iconPath": "img/clock.png",
+        "selectedIconPath": "img/clockSelect.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "img/message.png",
+        "selectedIconPath": "img/messageSelect.png"
+      },
+      {
+        "pagePath": "pages/group/group",
+        "text": "部门",
+        "iconPath": "img/group.png",
+        "selectedIconPath": "img/groupSelect.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人",
+        "iconPath": "img/user.png",
+        "selectedIconPath": "img/userSelect.png"
+      }
+    ],
+    "selectedColor": "#1296DB"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#EFF4FA",
+    "navigationBarTitleText": "小希打卡",
+    "navigationBarTextStyle": "black"
+  }
+}

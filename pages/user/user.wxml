@@ -1,0 +1,49 @@
+<!--pages/user/user.wxml-->
+<view class='Head'>
+  <view class='headImg'>
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <view class='nickName'>
+    <open-data type="userNickName"></open-data>
+  </view>
+</view>
+<view class='userInfo'>
+  <view>
+    昵称：希门吹水
+  </view>
+  <view style='margin-top: 20rpx;'>
+    <text wx:if='{{editing}}'>*</text>
+    姓名：
+    <text wx:if='{{!editing}}'>陈于希</text>
+    <input type='String' placeholder='请输入姓名' wx:if='{{editing}}'></input>
+  </view>
+  <view style='margin-top: 20rpx;'>
+    <text wx:if='{{!editing}}'>性别：男</text>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}"  wx:if='{{editing}}'>
+      <view class="picker">
+        *性别：{{array[index]}}
+      </view>
+    </picker>
+  </view>
+  <view style='margin-top: 20rpx;'>
+    已加入部门数：3
+  </view>
+  <view style='margin-top: 20rpx;'>
+    <text wx:if='{{editing}}' style='float:left;width:100%;'>*手机号：</text>
+    <text wx:if='{{!editing}}'>手机号：18302039155</text>
+    <view style='float:left;width: 60%;margin-left:5%;margin-bottom: 5rpx;'>
+      <input type='String' placeholder='请输入手机号'  wx:if='{{editing}}' ></input>
+    </view>
+    <view  wx:if='{{editing}}' style='float:left;width:35%;'>
+      <view style='color: #fff;background-color:#1397DB;text-align:center;font-size:38rpx;height:61rpx;padding-top:8rpx;'>验证码</view>
+    </view>
+    <view style='float:left;margin-left:1%;width:100%;margin-bottom: 30rpx;margin-top: 10rpx'>
+      <input type='String' placeholder='请输入手机验证码'  wx:if='{{editing}}' ></input>
+    </view>
+  </view>
+</view>
+<!-- 需要使用 button 来授权登录 -->
+<view class='btn'>
+  <button style='color: #fff;background-color:#1397DB;margin-bottom: 20rpx;' catchtap='edit'>{{editText}}</button>
+  <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" style='color: #fff;background-color:#1397DB;margin-bottom: 40rpx;'>授权登录</button>
+</view>

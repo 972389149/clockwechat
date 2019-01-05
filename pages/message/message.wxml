@@ -1,0 +1,61 @@
+<!--pages/message/message.wxml-->
+<view>
+  <view class='messageHead'>
+    <view class='messageName'>
+      <view style='float: left;margin-top: 5rpx;margin-left:20%;margin-right:5rpx;'>
+        <image src='../../img/sent.png' style='width:36rpx;height: 36rpx;'></image>
+      </view>
+      <view style='float: left;'> 管理员</view>
+    </view>
+    <view class='messageName'>
+      <view style='float: left;margin-top: 5rpx;margin-left:27%;margin-right:5rpx;'>
+        <image src='../../img/received.png' style='width:40rpx;height: 40rpx;'></image>
+      </view>
+      <view style='float: left;'> 用户</view>
+    </view>
+    <view class='messageName'>
+      <view style='float: left;margin-top: 5rpx;margin-left:27%;margin-right:5rpx;'>
+        <image src='../../img/setup.png' style='width:40rpx;height: 40rpx;'></image>
+      </view>
+      <view style='float: left;'> 操作</view>
+    </view>
+  </view>
+  <view class='messageContent'>
+    <view class='{{item.class_}}' wx:for='{{message}}' wx:for-item="item" wx:key='item' bindtap='chooseMessage'  data-_id="{{item._id}}">
+      <view class='messageName' style='font-size: 32rpx;'>
+        {{item.administratorName}}
+      </view>
+      <view class='adminName' style='font-size: 32rpx;'>
+        {{item.userName}}
+      </view>
+      <view class='messageControl'>
+        <view class='acceptBtn' wx:if='{{item.type == -1}}' catchtap='accept_btn' data-_id="{{item._id}}">同意</view>
+        <view class='refuseBtn' wx:if='{{item.type == -1}}' catchtap='refuse_btn' data-_id="{{item._id}}">拒绝</view>
+        <view class='delBtn' wx:if='{{item.type != -1}}' catchtap='delete_btn' data-_id="{{item._id}}">删除</view>
+      </view>
+    </view>
+  </view>
+  <view class='messageDetailTop'>
+    *详细信息
+  </view>
+  <view class='messageDetail'>
+    <view class='detailname'>
+      <text style='font-weight: bold;'>部门名称：</text>{{detailGroup}}
+    </view>
+    <view class='detailadmin'>
+      <text style='font-weight: bold;'>部门管理员：</text>{{detailAdmin}}
+    </view>
+    <view class='detailadmin'>
+      <text style='font-weight: bold;'>用户：</text>{{detailUser}}
+    </view>
+    <view class='detailadmin'>
+      <text style='font-weight: bold;'>发送时间：</text>{{detailTime}}
+    </view>
+    <view class='detailadmin'>
+      <text style='font-weight: bold;'>消息内容：</text>
+      <view style='margin-left: 30rpx;'>
+        [ {{detailContent}} ]
+      </view>
+    </view>
+  </view>
+</view>

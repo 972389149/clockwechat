@@ -1,0 +1,134 @@
+/* pages/message/message.wxss */
+.messageHead{
+  width: 100%;
+  height: 84rpx;
+  border-top: 1px solid #E6E6E6;
+  border-bottom: 1px solid #E6E6E6;
+  text-align: center;
+  font-size: 35rpx;
+  overflow: hidden;
+}
+.messageName{
+  float: left;
+  width: 33%;
+  height: 100%;
+  padding-top: 20rpx;
+  border-right: 1px solid #E6E6E6;
+}
+.adminName{
+  float: left;
+  width: 33%;
+  height: 100%;
+  padding-top: 16rpx;
+  border-right: 1px solid #E6E6E6;
+}
+.adminPhone{
+  float: left;
+  width: 30%;
+  height: 100%;
+  padding-top: 16rpx;
+  border-right: 1px solid #E6E6E6;
+}
+.messageControl{
+  float: left;
+  width: 33%;
+  height: 100%;
+  padding-top: 16rpx;
+}
+.messageContent{
+  width: 100%;
+  border-bottom: 1px solid #E6E6E6;
+  text-align: center;
+  font-size: 25rpx;
+  overflow: hidden;
+  max-height: 450rpx;
+  overflow-y: auto;
+}
+.messageItem{
+  height: 80rpx;
+  width: 100%;
+  border-bottom: 1px solid #E6E6E6;
+  /* margin-bottom: 10rpx; */
+  overflow: hidden;
+  background-color: #fff;
+}
+.messageItem_{
+  height: 80rpx;
+  width: 100%;
+  border-bottom: 1px solid #E6E6E6;
+  overflow: hidden;
+  background-color: #F5F7FA;
+}
+.acceptBtn{
+  float: left;
+  width: 35%;
+  height: 52rpx;
+  margin-top: -7rpx;
+  border: 1px solid #E6E6E6;
+  margin-left: 10%;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+  padding-top: 8rpx;
+  background-color: #67C23A;
+  color: #fff;
+}
+.refuseBtn{
+  float: left;
+  width: 35%;
+  height: 52rpx;
+  margin-top: -7rpx;
+  border: 1px solid #E6E6E6;
+  margin-left: 10%;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+  padding-top: 8rpx;
+  background-color: #E6A23C;
+  color: #fff;
+}
+.delBtn{
+  width: 80%;
+  height: 52rpx;
+  margin-top: -7rpx;
+  border: 1px solid #E6E6E6;
+  margin-left: 10%;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+  padding-top: 8rpx;
+  background-color: #F78989;
+  color: #fff;
+}
+.messageDetail{
+  width: 90%;
+  border-top: 1px solid #E6E6E6;
+  padding-left: 5%;
+  padding-right: 5%;
+  position: fixed;
+  bottom: 0px;
+  padding-top: 10rpx;
+  font-size: 30rpx;
+  min-height: 40%;
+  max-height: 40%;
+  overflow-y: auto;
+  background-color: #EFF4FA;
+  color: #303133;
+}
+.messageDetailTop{
+  position: fixed;
+  width: 95%;
+  height: 50rpx;
+  bottom: 41%;
+  /* border-top: 1px solid #E6E6E6; */
+  margin-left: 5%;
+  font-size: 25rpx;
+  color: #606266;
+}
+.detailname{
+  float: left;
+  width: 100%;
+  margin-top: 10rpx;
+}
+.detailadmin{
+  float: left;
+  width: 100%;
+  margin-top: 20rpx;
+}
